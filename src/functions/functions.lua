@@ -7,9 +7,9 @@ SMODS.current_mod.set_debuff = function(card)
    end
 
    -- prevent debuffs
-   if card.ability.name == "nacli" then return 'prevent_debuff' end
-   if card.ability.name == "naclstack" then return 'prevent_debuff' end
-   if card.ability.name == "garganacl" then return 'prevent_debuff' end
+   if card.ability.name == "nacli" and next(SMODS.find_card("j_sonfive_nacli")) then return 'prevent_debuff' end
+   if card.ability.name == "naclstack" and next(SMODS.find_card("j_sonfive_naclstack")) then return 'prevent_debuff' end
+   if card.ability.name == "garganacl" and next(SMODS.find_card("j_sonfive_garganacl")) then return 'prevent_debuff' end
 
    return false
 end
